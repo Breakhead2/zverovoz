@@ -8,19 +8,70 @@
     <title>Document</title>
   </head>
   <body class="body">
-    <div class="wrapper">
-      <header class="header">
-        <a href="/" class="logo">
-          <img src="./assets/images/logo.svg" alt="Зверовоз">
-          <span>зверолов</span>
-        </a>
-        <nav class="navbar">
-          <ul>
-            <li>
-              <a href=""></a>
-            </li>
-          </ul>
-        </nav>
+    <div class="body__wrapper">
+      <header class="body__header header">
+        <div class="header__container container">
+          <div class="header__row header__row--top">
+            <a href="/" class="header__logo" aria-label="Зверовоз">
+              <img src="./assets/images/logo.svg" alt="Зверовоз">
+<!--              <svg>-->
+<!--                <use href="/assets/images/logo.svg"></use>-->
+<!--              </svg>-->
+              <span>Зверовоз</span>
+            </a>
+            <nav class="header__nav header-nav">
+              <ul class="header-nav__list">
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">
+                    О нас
+                  </a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">
+                    Услуги
+                  </a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">
+                    Маршруты
+                  </a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">
+                    Как работаем
+                  </a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">
+                    Процедуры
+                  </a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="#">
+                    Условия
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__social">
+              <a class="header-social__item item-telegram" href="#">
+                <svg>
+                  <use href="assets/icons/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+              <a class="header-social__item item-watsapp" href="#">
+                <svg>
+                  <use href="assets/icons/sprite.svg#watsapp"></use>
+                </svg>
+              </a>
+              <a class="header-social__item item-viber" href="#">
+                <svg>
+                  <use href="assets/icons/sprite.svg#viber"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </header>
     </div>
   </body>
