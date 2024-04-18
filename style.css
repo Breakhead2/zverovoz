@@ -146,10 +146,20 @@ button {
   font-weight: 500;
 }
 
+@font-face {
+  font-family: 'Gerbera-Light';
+  src: url('/assets/fonts/Gerbera-Light.ttf');
+  font-weight: 300;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
 :root {
-  --neutral-gray: #aabbcc;
-  --basik-black: #000000;
-  --basik-white: #ffffff;
+  --gray: #aabbcc;
+  --black: #000000;
+  --white: #ffffff;
   --status-logo: #4db87d;
   --status-red: #f94949;
   --status-strok: #e4f1f9;
@@ -168,8 +178,10 @@ button {
   font-family: 'KyivTypeSans-Medium', sans-serif;
   font-weight: 500;
   font-size: 120px;
-  line-height: 140%;
-  letter-spacing: 1%;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--white);
 }
 
 @media (max-width: 320px) {
@@ -183,11 +195,14 @@ button {
   font-weight: 400;
   font-size: 72px;
   line-height: 130%;
+  text-transform: uppercase;
+  color: var(--white);
 }
 
 @media (max-width: 320px) {
   .h2-regular {
     font-size: 32px;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -196,11 +211,155 @@ button {
   font-weight: 400;
   font-size: 64px;
   line-height: 100%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--white);
 }
 
 @media (max-width: 320px) {
   .h3-regular {
     font-size: 32px;
+  }
+}
+
+.h1-medium {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: var(--white);
+}
+
+@media (max-width: 320px) {
+  .h1-medium {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
+
+.h4-meduim {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: var(--white);
+}
+
+@media (max-width: 320px) {
+  .h4-meduim {
+    font-size: 18px;
+  }
+}
+
+.large-regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: var(--white);
+}
+
+@media (max-width: 320px) {
+  .large-regular {
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.base-regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: var(--white);
+}
+
+@media (max-width: 320px) {
+  .base-regular {
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+
+.smale-regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--white);
+}
+
+.extra-smale-regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 120%;
+  color: var(--white);
+}
+
+.button-regular-1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+@media (max-width: 320px) {
+  .button-regular-1 {
+    font-size: 16px;
+    letter-spacing: 0.03em;
+  }
+}
+
+.button-regular-2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+@media (max-width: 320px) {
+  .button-regular-2 {
+    font-size: 14px;
+  }
+}
+
+.menu-rugalar-1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+@media (max-width: 320px) {
+  .menu-rugalar-1 {
+    font-size: 14px;
+  }
+}
+
+.menu-rugalar-2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--white);
+}
+
+@media (max-width: 320px) {
+  .menu-rugalar-2 {
+    font-size: 14px;
   }
 }
 
