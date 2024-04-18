@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'KyivTypeSans-Regular';
+  src: url('/assets/fonts/KyivTypeSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'KyivTypeSans-Medium';
+  src: url('/assets/fonts/KyivTypeSans-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Gerbera-Light';
+  src: url('/assets/fonts/Gerbera-Light.ttf');
+  font-weight: 300;
+}
+
+:root {
+  --gray: #aabbcc;
+  --black: #000000;
+  --white: #ffffff;
+  --status-logo: #4db87d;
+  --status-red: #f94949;
+  --status-strok: #e4f1f9;
+  --gradients-bl-gra: linear-gradient(to bottom right, #92c7e9, #cfe6f4);
+  --gradients-or-gra: linear-gradient(to bottom right, #e9a392, #f4f3cf);
+  --gradients-gr-gra: linear-gradient(to bottom right, #92e9ae, #cff4e3);
+  --color-bl1: #85b6d6;
+  --color-bl2: #c9e3f3;
+  --color-or1: #da8f75;
+  --color-or2: #d6ab86;
+  --color-gr1: #86d6a0;
+  --color-gr2: #a3ecc9;
+}
+
 html,
 body,
 div,
@@ -132,46 +172,6 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
-}
-
-@font-face {
-  font-family: 'KyivTypeSans-Regular';
-  src: url('/assets/fonts/KyivTypeSans-Regular.ttf');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'KyivTypeSans-Medium';
-  src: url('/assets/fonts/KyivTypeSans-Medium.ttf');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Gerbera-Light';
-  src: url('/assets/fonts/Gerbera-Light.ttf');
-  font-weight: 300;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
-
-:root {
-  --gray: #aabbcc;
-  --black: #000000;
-  --white: #ffffff;
-  --status-logo: #4db87d;
-  --status-red: #f94949;
-  --status-strok: #e4f1f9;
-  --gradients-bl-gra: linear-gradient(to bottom right, #92c7e9, #cfe6f4);
-  --gradients-or-gra: linear-gradient(to bottom right, #e9a392, #f4f3cf);
-  --gradients-gr-gra: linear-gradient(to bottom right, #92e9ae, #cff4e3);
-  --color-bl1: #85b6d6;
-  --color-bl2: #c9e3f3;
-  --color-or1: #da8f75;
-  --color-or2: #d6ab86;
-  --color-gr1: #86d6a0;
-  --color-gr2: #a3ecc9;
 }
 
 .name-medium {
@@ -331,34 +331,28 @@ button {
   }
 }
 
-.menu-rugalar-1 {
+.menu-regular-1 {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   text-transform: uppercase;
   color: var(--white);
+  transition: all 0.3s ease-out;
+}
+
+.menu-regular-1:hover {
+  font-weight: 500;
 }
 
 @media (max-width: 320px) {
-  .menu-rugalar-1 {
+  .menu-regular-1 {
     font-size: 14px;
   }
 }
 
-.menu-rugalar-2 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 100%;
-  text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: var(--white);
-}
-
 @media (max-width: 320px) {
-  .menu-rugalar-2 {
+  .menu-regular-2 {
     font-size: 14px;
   }
 }
@@ -373,5 +367,77 @@ body {
 
 .body {
   font-family: 'KyivTypeSans', sans-serif;
-  color: var(--basik-black);
+  color: var(--black);
+}
+
+.body__wrapper {
+  padding: 19px 30px 30px;
+  min-height: 100%;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: auto 1fr auto;
+  background: var(--white);
+  z-index: 1;
+}
+
+.container {
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.header {
+  border-radius: 64px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/images/header-background.png"), linear-gradient(90deg, rgba(148, 199, 233, 0.5) 0%, rgba(200, 227, 243, 0.5) 100%);
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__row--top {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  height: 96px;
+}
+
+.header__logo {
+  display: flex;
+}
+
+.header__logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+.header-logo_company {
+  fill: var(--white);
+}
+
+.header-logo_company:hover {
+  fill: var(--status-logo);
+}
+
+.header-nav {
+}
+
+.header-nav__list {
+  display: flex;
+  gap: 8px;
+}
+
+.header-nav__item {
+}
+
+.header-nav__link {
+  padding: 12px 8px;
+  white-space: nowrap;
 }
