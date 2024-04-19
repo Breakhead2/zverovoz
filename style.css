@@ -238,7 +238,7 @@ button {
   }
 }
 
-.h4-meduim {
+.h4-medium {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 24px;
@@ -248,7 +248,7 @@ button {
 }
 
 @media (max-width: 320px) {
-  .h4-meduim {
+  .h4-medium {
     font-size: 18px;
   }
 }
@@ -341,8 +341,27 @@ button {
   transition: all 0.3s ease-out;
 }
 
+.menu-regular-1 span {
+  position: relative;
+}
+
+.menu-regular-1 span:after {
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 1px;
+  background-color: var(--white);
+  content: "";
+  transition: all 0.3s ease-out;
+}
+
 .menu-regular-1:hover {
   font-weight: 500;
+}
+.menu-regular-1:hover span:after {
+  opacity: 1;
 }
 
 @media (max-width: 320px) {
@@ -438,6 +457,7 @@ body {
 }
 
 .header-nav__link {
+  display: block;
   padding: 12px 8px;
   white-space: nowrap;
 }
