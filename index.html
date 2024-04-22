@@ -71,7 +71,7 @@
                 </svg>
               </a>
             </div>
-            <a class="header__phone" href="tel:+71223455677">
+            <a class="button button-regular-1 header__phone" href="tel:+71223455677">
               <span>+7 122 345-56-77</span>
             </a>
           </div>
@@ -83,11 +83,11 @@
             <form class="header__callback-form" action="#">
               <div class="callback-form__column">
                 <div class="callback-form-item">
-                  <label class="callback-form__label-input label-input" for="from">
-                    <input type="text" placeholder="Откуда" id="from" required>
+                  <label class="callback-form__label-input label-input error" for="from">
+                    <input type="text" value="#Test" placeholder="Откуда" id="from" required>
                     <span>Откуда</span>
                   </label>
-                  <div class="callback-form__error">
+                  <div class="callback-form__error active">
                     <svg class="callback-form-error__icon">
                       <use href="assets/icons/sprite.svg#error"></use>
                     </svg>
@@ -132,6 +132,27 @@
                     <span>Некорректные символы</span>
                   </div>
                 </div>
+              </div>
+              <div class="callback-form__column callback-form__column-last">
+                <div class="callback-form-item">
+                  <label class="callback-form__label-input label-input" for="forward">
+                    <input type="text" placeholder="Откуда" id="forward" required>
+                    <span>Дата отправки</span>
+                  </label>
+                  <div class="callback-form__error">
+                    <svg class="callback-form-error__icon">
+                      <use href="assets/icons/sprite.svg#error"></use>
+                    </svg>
+                    <span>Некорректные символы</span>
+                  </div>
+                </div>
+                <button type="submit" class="button button-regular-1 submit-form">
+                  <span>Отправить</span>
+                </button>
+                <label for="agree" class="callback-form__label-checkbox label-checkbox">
+                  <input type="checkbox" name="agree" id="agree">
+                  <span>Я согласен на обработку пероснальных данных</span>
+                </label>
               </div>
             </form>
           </div>
