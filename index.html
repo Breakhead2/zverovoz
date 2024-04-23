@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
-    <title>Document</title>
+    <title>Зверовоз</title>
   </head>
   <body class="body">
     <div class="body__wrapper">
       <header class="body__header header">
         <div class="header__container container">
           <div class="header__row header__row--top">
-            <a href="/" class="header__logo" aria-label="Зверовоз">
-              <svg>
+            <a href="/" class="header__logo--container" aria-label="Зверовоз">
+              <svg class="header__logo--logo">
                 <use href="assets/icons/sprite.svg#logo"></use>
               </svg>
-              <svg class="header-logo_company">
+              <svg class="header__logo--company">
                 <use href="assets/icons/sprite.svg#company-name"></use>
               </svg>
             </a>
@@ -24,59 +24,148 @@
               <ul class="header-nav__list">
                 <li class="header-nav__item">
                   <a class="header-nav__link menu-regular-1" href="#">
-                    О нас
+                    <span>О нас</span>
                   </a>
                 </li>
                 <li class="header-nav__item">
                   <a class="header-nav__link menu-regular-1" href="#">
-                    Услуги
+                    <span>Услуги</span>
                   </a>
                 </li>
                 <li class="header-nav__item">
                   <a class="header-nav__link menu-regular-1" href="#">
-                    Маршруты
+                    <span>Маршруты</span>
                   </a>
                 </li>
                 <li class="header-nav__item">
                   <a class="header-nav__link menu-regular-1" href="#">
-                    Как работаем
+                    <span>Как работаем</span>
                   </a>
                 </li>
                 <li class="header-nav__item">
                   <a class="header-nav__link menu-regular-1" href="#">
-                    Процедуры
+                    <span>Процедуры</span>
                   </a>
                 </li>
                 <li class="header-nav__item">
                   <a class="header-nav__link menu-regular-1" href="#">
-                    Условия
+                    <span>Условия</span>
                   </a>
                 </li>
               </ul>
             </nav>
             <div class="header__social">
-              <a class="header-social__item item-telegram" href="#">
-                <svg>
+              <a class="header-social__item" href="#">
+                <svg class="item-telegram">
                   <use href="assets/icons/sprite.svg#telegram"></use>
                 </svg>
               </a>
-              <a class="header-social__item item-watsapp" href="#">
-                <svg>
+              <a class="header-social__item" href="#">
+                <svg class="item-watsapp">
                   <use href="assets/icons/sprite.svg#watsapp"></use>
                 </svg>
               </a>
-              <a class="header-social__item item-viber" href="#">
-                <svg>
+              <a class="header-social__item" href="#">
+                <svg class="item-viber">
                   <use href="assets/icons/sprite.svg#viber"></use>
                 </svg>
               </a>
             </div>
-            <a class="header__phone" href="tel:+71223455677">
-              +7 122 345-56-77
+            <a class="button button-regular-1 header__phone" href="tel:+71223455677">
+              <span>+7 122 345-56-77</span>
             </a>
+          </div>
+          <div class="header__row header__row--middle">
+            <h1 class="name-medium">зверовоз</h1>
+            <p class="h1-medium">Безопасные перевозки животных по России и Миру</p>
+          </div>
+          <div class="header__row header-row--bottom">
+            <form class="header__callback-form" action="#">
+              <div class="callback-form__column">
+                <div class="callback-form-item">
+                  <label class="callback-form__label-input label-input error" for="from">
+                    <input type="text" value="#Test" placeholder="Откуда" id="from" required>
+                    <span>Откуда</span>
+                  </label>
+                  <div class="callback-form__error active">
+                    <svg class="callback-form-error__icon">
+                      <use href="assets/icons/sprite.svg#error"></use>
+                    </svg>
+                    <span>Некорректные символы</span>
+                  </div>
+                </div>
+                <div class="callback-form-item">
+                  <label class="callback-form__label-input label-input" for="pet_weight">
+                    <input type="text" placeholder="Куда" id="pet_weight" required>
+                    <span>Вес питомца (кг)</span>
+                  </label>
+                  <div class="callback-form__error">
+                    <svg class="callback-form-error__icon">
+                      <use href="assets/icons/sprite.svg#error"></use>
+                    </svg>
+                    <span>Некорректные символы</span>
+                  </div>
+                </div>
+              </div>
+              <div class="callback-form__column">
+                <div class="callback-form-item">
+                  <label class="callback-form__label-input label-input" for="forward">
+                    <input type="text" placeholder="Откуда" id="forward" required>
+                    <span>Куда</span>
+                  </label>
+                  <div class="callback-form__error">
+                    <svg class="callback-form-error__icon">
+                      <use href="assets/icons/sprite.svg#error"></use>
+                    </svg>
+                    <span>Некорректные символы</span>
+                  </div>
+                </div>
+                <div class="callback-form-item">
+                  <label class="callback-form__label-input label-input" for="phone">
+                    <input type="text" placeholder="Куда" id="phone" required>
+                    <span>Ваш телефон</span>
+                  </label>
+                  <div class="callback-form__error">
+                    <svg class="callback-form-error__icon">
+                      <use href="assets/icons/sprite.svg#error"></use>
+                    </svg>
+                    <span>Некорректные символы</span>
+                  </div>
+                </div>
+              </div>
+              <div class="callback-form__column callback-form__column-last">
+                <div class="callback-form-item">
+                  <label class="callback-form__label-input label-input" for="forward">
+                    <input type="text" placeholder="Откуда" id="forward" required>
+                    <span>Дата отправки</span>
+                  </label>
+                  <div class="callback-form__error">
+                    <svg class="callback-form-error__icon">
+                      <use href="assets/icons/sprite.svg#error"></use>
+                    </svg>
+                    <span>Некорректные символы</span>
+                  </div>
+                </div>
+                <button type="submit" class="button button-regular-1 submit-form">
+                  <span>Отправить</span>
+                </button>
+                <label for="agree" class="callback-form__label-checkbox label-checkbox">
+                  <input type="checkbox" name="agree" id="agree">
+                  <span>Я согласен на обработку пероснальных данных</span>
+                </label>
+              </div>
+            </form>
           </div>
         </div>
       </header>
+      <main class="main">
+        <section class="services">
+          <div class="services__container container">
+
+          </div>
+        </section>
+      </main>
+      <footer></footer>
     </div>
   </body>
 </html>
